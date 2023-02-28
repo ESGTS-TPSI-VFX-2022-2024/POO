@@ -1,0 +1,6 @@
+INDEX VERSION 1.131+C:\Users\SalaAulas\POO2023\.metadata\.plugins\org.eclipse.jdt.core
+2286916598.index
+4282950496.index
+1865797976.index
+507311838.index
+1186611542.index
