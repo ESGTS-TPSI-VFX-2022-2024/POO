@@ -8,6 +8,7 @@ public class Fatura {
 	
 	private String numero;
 	private Date data;
+	private Empresa empresa;
 	
 	
 	// =======================================================
@@ -28,6 +29,14 @@ public class Fatura {
 	
 	public void setData(Date data) {
 		this.data = data;
+	}
+	
+	public Empresa getEmpresa() {
+		return empresa;
+	}
+
+	public void setEmpresa(Empresa empresa) {
+		this.empresa = empresa;
 	}
 	
 	// =======================================================
@@ -56,6 +65,12 @@ public class Fatura {
 		
 		resultado += "Número: " + this.numero + "\r\n";
 		resultado += "Data: " + this.data + "\r\n";
+		
+		resultado += "-----------------------------------\r\n";
+		resultado += "DADOS DA EMPRESA\r\n";
+		resultado += "-----------------------------------\r\n";
+		
+		resultado += this.empresa.Imprimir();
 		
 		return resultado;
 		
