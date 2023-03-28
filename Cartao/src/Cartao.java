@@ -7,19 +7,26 @@ public class Cartao {
 	
 	private String nome;
 	private Date dataNascimento;
-	private String codigoPostal;
-	private String localidade;
 	private String telemovel;
 	private String email;
 	private String NIF;
 	private char sexo;
 	private String tipoDocIdentificacao;
 	private String nrDocIdentificacao;
+	private Morada morada;
 	
 	// =======================================================
 	// ============ ACESSORES e MODIFICADORES ===============
 	// =======================================================
 	
+	public Morada getMorada() {
+		return morada;
+	}
+
+	public void setMorada(Morada morada) {
+		this.morada = morada;
+	}
+
 	public String getNome() {
 		return nome;
 	}
@@ -34,21 +41,6 @@ public class Cartao {
 	
 	public void setDataNascimento(Date dataNascimento) {
 		this.dataNascimento = dataNascimento;
-	}
-	
-	public String getCodigoPostal() {
-		return codigoPostal;
-	}
-	
-	public void setCodigoPostal(String codigoPostal) {
-		this.codigoPostal = codigoPostal;
-	}
-	public String getLocalidade() {
-		return localidade;
-	}
-	
-	public void setLocalidade(String localidade) {
-		this.localidade = localidade;
 	}
 	
 	public String getTelemovel() {
@@ -114,19 +106,19 @@ public class Cartao {
 	}
 	   
 	// CONSTRUTOR COM PARÂMETROS
-	public Cartao(String nome, Date dataNascimento, String codigoPostal, String localidade, String telemovel,
-			String email, String nIF, char sexo, String tipoDocIdentificacao, String nrDocIdentificacao) {
+	public Cartao(String nome, Date dataNascimento, String telemovel,
+			String email, String nIF, char sexo, String tipoDocIdentificacao, String nrDocIdentificacao,
+			Morada morada) {
 		super();
 		this.nome = nome;
 		this.dataNascimento = dataNascimento;
-		this.codigoPostal = codigoPostal;
-		this.localidade = localidade;
 		this.telemovel = telemovel;
 		this.email = email;
 		this.NIF = nIF;
 		this.sexo = sexo;
 		this.tipoDocIdentificacao = tipoDocIdentificacao;
 		this.nrDocIdentificacao = nrDocIdentificacao;
+		this.morada = morada;
 	}
 	
 	
