@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Morada {
 	// =======================================================
 	// ===================== ATRIBUTOS =======================
@@ -93,4 +95,24 @@ public class Morada {
 	
 	
 	// ----> equals()
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		
+		if (obj == null)
+			return false;
+		
+		if (getClass() != obj.getClass())
+			return false;
+		
+		Morada other = (Morada) obj;
+		
+		return codigoPostal3 == other.codigoPostal3 
+				&& codigoPostal4 == other.codigoPostal4
+				&& Objects.equals(localidade, other.localidade) 
+				&& Objects.equals(nrPortaAndar, other.nrPortaAndar)
+				&& Objects.equals(rua, other.rua);
+	}
+	
 }

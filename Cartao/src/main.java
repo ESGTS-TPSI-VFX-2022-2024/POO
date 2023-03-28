@@ -6,6 +6,13 @@ public class main {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		Morada m1 = new Morada(2120, 182, "1", "1", "1");
+		//Morada m3 = new Morada(2120, 182, "1", "1", "1");
+		Morada m3 = m1;
+		
+		System.out.println(m1 == m3);
+		System.out.println(m1.equals(m3));
+		
 		/*
 		
 		// a) Criar um cartão vazio;
@@ -58,10 +65,10 @@ public class main {
 		
 		
 		System.out.println("Qual o CP4?");
-		int cp4 = sc.nextInt();
+		int cp4 = Integer.parseInt(sc.nextLine());
 		
 		System.out.println("Qual o CP3?");
-		int cp3 = sc.nextInt();
+		int cp3 = Integer.parseInt(sc.nextLine());
 		
 		System.out.println("Qual a rua?");
 		String rua = sc.nextLine();
@@ -72,7 +79,9 @@ public class main {
 		System.out.println("Qual a localidade?");
 		String localidade = sc.nextLine();
 		
+		
 		Morada m2 = new Morada(cp4, cp3, rua, nrPortaAndar, localidade);
+		
 		Cartao c3 = new Cartao(nome, 
 				new Date(0), 
 				telemovel, 
