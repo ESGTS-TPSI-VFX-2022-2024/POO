@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Morada {
+public class Morada implements Cloneable {
 	// =======================================================
 	// ===================== ATRIBUTOS =======================
 	// =======================================================
@@ -113,6 +113,20 @@ public class Morada {
 				&& Objects.equals(localidade, other.localidade) 
 				&& Objects.equals(nrPortaAndar, other.nrPortaAndar)
 				&& Objects.equals(rua, other.rua);
+	}
+	
+	@Override
+	public Morada clone() throws CloneNotSupportedException {
+		
+		if (this.codigoPostal4 == 2120) {
+			throw new CloneNotSupportedException("Não é possivel clonar moradas com o código postal 2120");
+		} else if (this.codigoPostal3 == 188) {
+			throw new CloneNotSupportedException("Não é possivel clonar moradas com o código postal 188");
+		}
+		else {
+			return (Morada)super.clone();
+		}
+		
 	}
 	
 }

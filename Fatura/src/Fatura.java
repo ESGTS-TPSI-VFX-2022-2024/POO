@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Fatura {
@@ -9,12 +10,21 @@ public class Fatura {
 	private String numero;
 	private Date data;
 	private Empresa empresa;
+	private ArrayList<Produto> produtos;
 	
 	
 	// =======================================================
 	// ============ ACESSORES e MODIFICADORES ===============
 	// =======================================================
 
+	public ArrayList<Produto> getProdutos() {
+		return produtos;
+	}
+
+	public void setProdutos(ArrayList<Produto> produtos) {
+		this.produtos = produtos;
+	}
+	
 	public String getNumero() {
 		return numero;
 	}
@@ -71,6 +81,14 @@ public class Fatura {
 		resultado += "-----------------------------------\r\n";
 		
 		resultado += this.empresa.Imprimir();
+		
+		resultado += "-----------------------------------\r\n";
+		resultado += "PRODUTOS\r\n";
+		resultado += "-----------------------------------\r\n";
+		
+		for (Produto produto : this.produtos) {
+			resultado += produto.Imprimir() + "\r\n";
+		}
 		
 		return resultado;
 		

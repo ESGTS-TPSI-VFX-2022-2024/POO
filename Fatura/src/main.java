@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class main {
 
@@ -13,6 +15,22 @@ public class main {
 		f1.setNumero("1");
 		f1.setData(new Date());
 		f1.setEmpresa(e1);
+		
+		Produto p1 = new Produto();
+		p1.setNome("Pao");
+		p1.setPreco(1);
+		p1.setQtd(1);
+		
+		Produto p2 = new Produto();
+		p2.setNome("Água");
+		p2.setPreco(2);
+		p2.setQtd(10);
+		
+		ArrayList<Produto> produtos = new ArrayList<Produto>();
+		produtos.add(p1);
+		produtos.add(p2);
+		
+		f1.setProdutos(produtos);
 		
 		System.out.println(f1.Imprimir());
 		

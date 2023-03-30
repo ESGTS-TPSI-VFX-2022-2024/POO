@@ -3,15 +3,30 @@ import java.util.Scanner;
 
 public class main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws CloneNotSupportedException {
 		// TODO Auto-generated method stub
 		
 		Morada m1 = new Morada(2120, 182, "1", "1", "1");
 		//Morada m3 = new Morada(2120, 182, "1", "1", "1");
-		Morada m3 = m1;
+		//Morada m3 = m1;
 		
-		System.out.println(m1 == m3);
-		System.out.println(m1.equals(m3));
+		try {
+			Morada m3 = m1.clone();
+			
+			m3.setCodigoPostal3(181);
+			
+			System.out.println(m1.getCodigoPostal3());
+			System.out.println(m3.getCodigoPostal3());
+		} catch (Exception e) {
+			System.out.println("Ocorreu um erro");
+			System.out.println(e.getMessage());
+		}
+		
+		
+		
+		
+		//System.out.println(m1 == m3);
+		//System.out.println(m1.equals(m3));
 		
 		/*
 		
@@ -38,7 +53,7 @@ public class main {
 		System.out.println(c2.getNrDocIdentificacao());
 		System.out.println(c2.getNome());
 		
-		*/
+		
 		
 		Scanner sc = new Scanner(System.in);
 		
@@ -91,6 +106,8 @@ public class main {
 				tipoDoc,
 				nrDoc,
 				m2);
+				
+				*/
 		
 	}
 
