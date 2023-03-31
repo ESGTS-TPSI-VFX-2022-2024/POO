@@ -24,13 +24,28 @@ public class main {
 		Produto p2 = new Produto();
 		p2.setNome("Água");
 		p2.setPreco(2);
-		p2.setQtd(10);
+		p2.setQtd(1);
 		
+		Produto p3 = new Produto();
+		p3.setNome("Água");
+		p3.setPreco(2);
+		p3.setQtd(1);
+		
+		Produto p4 = new Produto();
+		p4.setNome("Água");
+		p4.setPreco(1);
+		p4.setQtd(1);
+		
+		/*
 		ArrayList<Produto> produtos = new ArrayList<Produto>();
 		produtos.add(p1);
 		produtos.add(p2);
+		*/
 		
-		f1.setProdutos(produtos);
+		f1.AdicionarProduto(p1);
+		f1.AdicionarProduto(p2);
+		f1.AdicionarProduto(p3);
+		f1.AdicionarProduto(p4);
 		
 		System.out.println(f1.Imprimir());
 		

@@ -10,7 +10,7 @@ public class Fatura {
 	private String numero;
 	private Date data;
 	private Empresa empresa;
-	private ArrayList<Produto> produtos;
+	private ArrayList<Produto> produtos = new ArrayList<Produto>();
 	
 	
 	// =======================================================
@@ -69,6 +69,25 @@ public class Fatura {
 	// =================== .COMPORTAMENTOS ==================
 	// =======================================================
 
+	public void AdicionarProduto(Produto produtoAdd) {
+		
+		boolean produtoNovo = true;
+		
+		// Percorrer todos os produtos da fatura
+		for (Produto produto : this.produtos) {
+			// Se o produto a adicionar for igual ao produto da fatura, adiciona qtd
+			if (produto.equals(produtoAdd)) {
+				produto.setQtd(produto.getQtd() + produtoAdd.getQtd());
+				produtoNovo = false;
+			}
+		}
+		
+		if (produtoNovo) {
+			this.produtos.add(produtoAdd);
+		}
+		
+	}
+	
 	public String Imprimir() {
 		
 		String resultado = "";

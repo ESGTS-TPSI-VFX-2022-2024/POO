@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Produto {
 	// =======================================================
 	// ===================== ATRIBUTOS =======================
@@ -42,6 +44,7 @@ public class Produto {
 		
 	}  
 	
+	
 	// CONSTRUTOR COM PARÂMETROS
 	public Produto(String nome, double preco, double qtd) {
 		super();
@@ -69,4 +72,25 @@ public class Produto {
 	
 	
 	// ----> equals()
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		
+		if (obj == null)
+			return false;
+		
+		if (getClass() != obj.getClass())
+			return false;
+		
+		Produto other = (Produto) obj;
+		
+		/*
+		return nome, other.nome
+				&& preco == other.preco;
+		*/
+		
+		return Objects.equals(nome, other.nome)
+				&& preco == other.preco;
+	}
 }
