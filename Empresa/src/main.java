@@ -1,3 +1,5 @@
+import pkg_emp.Administrador;
+import pkg_emp.Chefe;
 import pkg_emp.Trabalhador;
 import pkg_emp.Vendedor;
 
@@ -29,7 +31,30 @@ public class main {
 		v1.CalcularOrdenadoFinal();
 		System.out.println(v1);
 		
-		//t1.ordenadoFinal = 0;
+		// CHEFE
+		Chefe c1 = new Chefe();
+		c1.setNome("Manuel");
+		c1.setNIF("15415151");
+		c1.setNrIdentificacao("1541515");
+		c1.setTelefone("25151");
+		c1.setOrdenado(1000);
+		c1.setValorVendas(1000);
+		c1.setPercentagemVendas(0.10);
+		c1.setPercentagemIsencao(0.10);
+		c1.CalcularOrdenadoFinal();
+		System.out.println(c1);
+		
+		// ADMINISTRACAO
+		Administrador a1 = new Administrador();
+		a1.setNome("Rui");
+		a1.setNIF("15415151");
+		a1.setNrIdentificacao("1541515");
+		a1.setTelefone("25151");
+		a1.setOrdenado(1000);
+		a1.setAjudasCusto(1000);
+		a1.setDespesasRepresentacao(1000);
+		a1.CalcularOrdenadoFinal();
+		System.out.println(a1);
 		
 	}
 
