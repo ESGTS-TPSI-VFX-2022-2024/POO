@@ -9,7 +9,7 @@ public class main {
 		
 		Empresa e1 = new Empresa();
 		e1.setNome("ESGTS");
-		e1.setNif("5151511551");
+		e1.setNIF("5151511551");
 		
 		Fatura f1 = new Fatura();
 		f1.setNumero("1");

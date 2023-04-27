@@ -1,22 +1,49 @@
-public class Empresa extends Entidade {
+public class Entidade {
 	// =======================================================
 	// ===================== ATRIBUTOS =======================
 	// =======================================================
 	
-	private int cae;
+	private String nome;
+	private String morada;
+	private String nif;
+	private String contacto;
 	
 	// =======================================================
 	// ============ ACESSORES e MODIFICADORES ===============
 	// =======================================================
 
-	public int getCae() {
-		return cae;
+	public String getNome() {
+		return nome;
 	}
-
-
-	public void setCae(int cae) {
-		this.cae = cae;
+	
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
+	
+	public String getMorada() {
+		return morada;
+	}
+	
+	public void setMorada(String morada) {
+		this.morada = morada;
+	}
+	
+	public String getNIF() {
+		return nif;
+	}
+	
+	public void setNIF(String nIF) {
+		nif = nIF;
+	}
+	
+	public String getContacto() {
+		return contacto;
+	}
+	
+	public void setContacto(String contacto) {
+		this.contacto = contacto;
+	}
+	
 	
 	// =======================================================
 	// =================== CONSTRUTORES =====================
@@ -25,21 +52,18 @@ public class Empresa extends Entidade {
 	  
 	   
 	// CONSTRUTOR DEFAULT
-	public Empresa() {
-		super();
-		// TODO Auto-generated constructor stub
+	public Entidade() {
+		
 	}
-
-	// CONSTRUTOR COM PARÂMETROS
-	public Empresa(String nome, String morada, String nIF, String contacto) {
-		super(nome, morada, nIF, contacto);
-		// TODO Auto-generated constructor stub
-	}
+	   
 	
-	public Empresa(String nome, String morada, String nIF, String contacto, int cae) {
-		super(nome, morada, nIF, contacto);
-		this.cae = cae;
-		// TODO Auto-generated constructor stub
+	// CONSTRUTOR COM PARÂMETROS
+	public Entidade(String nome, String morada, String nIF, String contacto) {
+		super();
+		this.nome = nome;
+		this.morada = morada;
+		this.nif = nIF;
+		this.contacto = contacto;
 	}
 	
 	
@@ -47,19 +71,18 @@ public class Empresa extends Entidade {
 	// =================== .COMPORTAMENTOS ==================
 	// =======================================================
 
-	@Override
 	public String Imprimir() {
 		
-		String resultado = super.Imprimir();
+		String resultado = "";
 		
-		resultado += "CAE: " + this.cae + "\r\n";
+		resultado += "Nome: " + this.nome + "\r\n";
+		resultado += "Morada: " + this.morada + "\r\n";
+		resultado += "NIF: " + this.nif + "\r\n";
+		resultado += "Contacto: " + this.contacto + "\r\n";
 		
 		return resultado;
 		
 	}
-
-
-	
 	
 	// =======================================================
 	// ============== MÉTODOS COMPLEMENTARES ==============

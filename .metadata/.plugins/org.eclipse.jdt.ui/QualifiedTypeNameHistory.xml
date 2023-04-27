@@ -9,4 +9,6 @@
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="pkg_emp.Chefe"/>
+    <fullyQualifiedTypeName name="pkg_emp.Administrador"/>
 </qualifiedTypeNameHistroy>

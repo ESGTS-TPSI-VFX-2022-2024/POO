@@ -48,8 +48,8 @@ public class Semaforo {
 	
 	public void MudaEstado () {
 		
-		if (this
-{
+		if (this.luzVermelha)
+		{
 			this.luzVermelha = false;
 			this.luzVerde = true;
 		} else if (this.luzAmarela) {
