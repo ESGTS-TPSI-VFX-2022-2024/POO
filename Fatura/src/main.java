@@ -36,6 +36,24 @@ public class main {
 		p4.setPreco(1);
 		p4.setQtd(1);
 		
+		ProdutoComReferencia p5 = new ProdutoComReferencia();
+		p5.setNome("Telemóvel");
+		p5.setPreco(1);
+		p5.setQtd(1);
+		p5.setReferencia("fdsfds4515fd");
+		
+		ProdutoComData p6 = new ProdutoComData();
+		p6.setNome("Iogurte");
+		p6.setPreco(1);
+		p6.setQtd(1);
+		p6.setDataValidade(new Date(2023,10,10));
+		
+		ProdutoComReferencia p7 = new ProdutoComReferencia();
+		p7.setNome("Telemóvel");
+		p7.setPreco(1);
+		p7.setQtd(1);
+		p7.setReferencia("fdsfds111111");
+		
 		/*
 		ArrayList<Produto> produtos = new ArrayList<Produto>();
 		produtos.add(p1);
@@ -46,6 +64,9 @@ public class main {
 		f1.AdicionarProduto(p2);
 		f1.AdicionarProduto(p3);
 		f1.AdicionarProduto(p4);
+		f1.AdicionarProduto(p5);
+		f1.AdicionarProduto(p6);
+		f1.AdicionarProduto(p7);
 		
 		System.out.println(f1.Imprimir());
 		

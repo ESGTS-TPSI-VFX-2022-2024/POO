@@ -10,6 +10,7 @@ public class Fatura {
 	private String numero;
 	private Date data;
 	private Empresa empresa;
+	private Cliente cliente;
 	private ArrayList<Produto> produtos = new ArrayList<Produto>();
 	
 	
@@ -47,6 +48,14 @@ public class Fatura {
 
 	public void setEmpresa(Empresa empresa) {
 		this.empresa = empresa;
+	}
+	
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+	
+	public Cliente getCliente() {
+		return cliente;
 	}
 	
 	// =======================================================
