@@ -12,11 +12,20 @@ public class Fatura {
 	private Empresa empresa;
 	private Cliente cliente;
 	private ArrayList<Produto> produtos = new ArrayList<Produto>();
+	private double valorTotal;
 	
 	
 	// =======================================================
 	// ============ ACESSORES e MODIFICADORES ===============
 	// =======================================================
+
+	public double getValorTotal() {
+		return valorTotal;
+	}
+
+	public void setValorTotal(double valorTotal) {
+		this.valorTotal = valorTotal;
+	}
 
 	public ArrayList<Produto> getProdutos() {
 		return produtos;
@@ -95,9 +104,25 @@ public class Fatura {
 			this.produtos.add(produtoAdd);
 		}
 		
+		CalcularValorTotal();
+		
+	}
+	
+	public void CalcularValorTotal() {
+		
+		double valor = 0;
+		
+		for (Produto produto : this.produtos) {
+			valor = valor + (produto.getPreco() * produto.getQtd());
+		}
+		
+		this.valorTotal = valor;
+		
 	}
 	
 	public String Imprimir() {
+		
+		
 		
 		String resultado = "";
 		
@@ -117,6 +142,12 @@ public class Fatura {
 		for (Produto produto : this.produtos) {
 			resultado += produto.Imprimir() + "\r\n";
 		}
+		
+		resultado += "-----------------------------------\r\n";
+		resultado += "TOTAL\r\n";
+		resultado += "-----------------------------------\r\n";
+		
+		resultado += this.valorTotal;
 		
 		return resultado;
 		
