@@ -21,7 +21,10 @@ public class Produto {
 		this.nome = nome;
 	}
 	public double getPreco() {
-		return preco;
+		
+		double preco = 1000;
+		
+		return this.preco;
 	}
 	public void setPreco(double preco) {
 		this.preco = preco;

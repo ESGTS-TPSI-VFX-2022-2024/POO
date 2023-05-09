@@ -68,7 +68,37 @@ public class main {
 		f1.AdicionarProduto(p6);
 		f1.AdicionarProduto(p7);
 		
-		System.out.println(f1.Imprimir());
+		
+		
+		Fatura f2 = new Fatura();
+		f2.setNumero("2");
+		f2.setData(new Date());
+		f2.setEmpresa(e1);
+		
+		f2.AdicionarProduto(p1);
+		f2.AdicionarProduto(p2);
+		
+		Fatura f3 = new Fatura();
+		f3.setNumero("3");
+		f3.setData(new Date());
+		f3.setEmpresa(e1);
+		
+		f3.AdicionarProduto(p1);
+		
+		//System.out.println(f1.Imprimir());
+		
+		Dossier d1 = new Dossier();
+		d1.AdicionarDoc(f1);
+		d1.AdicionarDoc(f2);
+		d1.AdicionarDoc(f3);
+		
+		
+		
+		//d1.AvancarPagina();
+		//d1.RemoverFaturaAtual();
+		
+		d1.ProcurarFatura("3");
+		System.out.println(d1.ImprimirPagina());;
 		
 	}
 
