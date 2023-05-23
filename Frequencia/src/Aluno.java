@@ -20,6 +20,10 @@ public class Aluno extends Pessoa {
 		return Sexo;
 	}
 	
+	public void setSexo(char sexo) {
+		this.Sexo = sexo;
+	}
+	
 	// =======================================================
 	// =================== CONSTRUTORES =====================
 	// =======================================================
